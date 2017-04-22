@@ -1,6 +1,7 @@
 import os
 import codecs
 import re
+import sys
 from setuptools import setup
 from setuptools import find_packages
 
@@ -30,8 +31,8 @@ with open('requirements.txt') as infile:
 
 
 setup(
-    name='jenkins',
-    version=find_version("jenkins", "__init__.py"),
+    name='jenkinscli',
+    version=find_version("jenkinscli", "__init__.py"),
     description='Simple Jenkins CLI',
     author='Bernardo Vale',
     license='Apache License 2.0',
@@ -45,7 +46,7 @@ setup(
     ],
     # entry_points="""
     # [console_scripts]
-    # jenkins=jenkins.cli.main:main
+    # jenkinscli=jenkinscli.cli.main:main
     # """,
     classifiers=[
         'Environment :: Console',
