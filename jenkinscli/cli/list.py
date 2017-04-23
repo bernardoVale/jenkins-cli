@@ -1,10 +1,10 @@
+import re
 
 
 def list_jobs(args, server):
-    jobs = server.get_job_info_regex(pattern=args.pattern, folder_depth=None)
+
+    jobs = server.get_jobs(folder_depth=None, view_name=args.view)
+
     for job in jobs:
-        color = job['color']
-        url = job['url']
-        in_queue = job['inQueue']
-        name = job['displayName']
-        print("Name:{} In Queue:{} Status:{} URL:{}".format(name, in_queue, color, url))
+        if re.search(args.pattern, job['name'], flags=re.I):
+            print job['name']
