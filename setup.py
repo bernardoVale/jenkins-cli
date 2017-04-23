@@ -49,6 +49,7 @@ setup(
     # jenkinscli=jenkinscli.cli.main:main
     # """,
     classifiers=[
+        'Development Status :: 4 - Beta',
         'Environment :: Console',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
