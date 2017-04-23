@@ -7,4 +7,4 @@ def list_jobs(args, server):
 
     for job in jobs:
         if re.search(args.pattern, job['name'], flags=re.I):
-            print job['name']
+            print(job['name'])
