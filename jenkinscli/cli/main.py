@@ -14,7 +14,7 @@ except:
 def main():
 
     # BASE_URL = "https://ecombuild.wsgc.com/jenkins"
-    server = jenkins.Jenkins(url, username=username, password=password)
+    server = jenkins.Jenkins(url, username=username, password=password, timeout=240)
     # server = jenkins.Jenkins(BASE_URL, username='bvale', password='alsk1029QWE#')
 
     args = parser.parse_args()
