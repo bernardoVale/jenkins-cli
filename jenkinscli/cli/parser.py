@@ -5,6 +5,7 @@ from .ping import ping
 from .list import list_jobs
 from .info import info
 from .cat import cat
+from .script import script
 
 parser = argparse.ArgumentParser(formatter_class=RawTextHelpFormatter)
 
@@ -45,3 +46,7 @@ tail_parser = subparsers.add_parser('cat', help='Reads last build console logs')
 tail_parser.add_argument('job', metavar='job_name', default=None,
                          help='Job name which you want collect the console logs')
 tail_parser.set_defaults(func=cat)
+
+script_parser = subparsers.add_parser('script', help='Executes a groovy script on Jenkins server')
+script_parser.add_argument('script', default=None, help='Path to groovy script')
+script_parser.set_defaults(func=script)
